@@ -1,5 +1,5 @@
 #### <a name="s1"></a>1. Avoid empty src or href
-You may expect a browser to do nothing when it encounters an empty image src. However, it is not the case in most browsers. IE makes a request to the directory in which the page is located; Safari, Chrome, Firefox 3 and earlier make a request to the actual page itself. This behavior could possibly corrupt user data, waste server computing cycles generating a page that will never be viewed, and in the worst case, cripple your servers by sending a large amount of unexpected traffic. 
+*You may expect a browser to do nothing when it encounters an empty image src. However, it is not the case in most browsers. IE makes a request to the directory in which the page is located; Safari, Chrome, Firefox 3 and earlier make a request to the actual page itself. This behavior could possibly corrupt user data, waste server computing cycles generating a page that will never be viewed, and in the worst case, cripple your servers by sending a large amount of unexpected traffic. *
 
 This is pretty simple to fix. Simply make sure you don’t have any sources that are left empty. This is an older rule and we rarely see many people fail this rule.
 
@@ -9,11 +9,11 @@ This is pretty simple to fix. Simply make sure you don’t have any sources that
 ```
 
 #### <a name="s2"></a>2. Put CSS at Top
-Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively.
+*Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively.*
 
-The HTML specification states that stylesheets are to be included in the HEAD of the page. However, if you do this it will become render blocking. And while it will fix the warning in YSlow it will actually create one to appear in Google PageSpeed Insights. Completely eliminating the use of render blocking resources may not be possible in all cases. However, there do exist some recommendations to help prevent blocking resources such as lessening the amount of CSS files, inlining your CSS, minifying your CSS, and moving your scripts to the bottom of the page (just before your </body> tag), etc.
+The HTML specification states that stylesheets are to be included in the HEAD of the page. However, if you do this it will become render blocking. And while it will fix the warning in YSlow it will actually create one to appear in Google PageSpeed Insights. Completely eliminating the use of render blocking resources may not be possible in all cases. However, there do exist some recommendations to help prevent blocking resources such as lessening the amount of CSS files, inlining your CSS, minifying your CSS, and moving your scripts to the bottom of the page (just before your `</body>` tag), etc.
 
-In our test, to fix our C grade for this rule we would need to move both our CSS footer stylesheets up to the top between our <head></head> tags.
+In our test, to fix our C grade for this rule we would need to move both our CSS footer stylesheets up to the top between our `<head></head>` tags.
 
 ```html
 <head>
@@ -29,7 +29,7 @@ In our test, to fix our C grade for this rule we would need to move both our CSS
 
 When it comes to Javascript there are some best practices to always keep in mind.
 
-*Move your scripts to the bottom of the page right before your </body> tag.
+*Move your scripts to the bottom of the page right before your `</body>` tag.
 *Use the async or defer directive to avoid render blocking.
 
 **Loading Javascript Asynchronously**
@@ -57,7 +57,7 @@ This is a good example of how to defer loading of javascript properly.
 
 CSS expressions can be used to set CSS properties dynamically, like the example below. If you need to change values like this it might be better to combine CSS with some JavaScript to achieve the same thing.
 
-```css
+```html
 background-color: expression( (new Date()).getHours()%2 ? "#B8D4FF" : "#F08A00" );
 ```
 
