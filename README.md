@@ -53,8 +53,9 @@ CSS expressions (supported in IE beginning with Version 5) are a powerful, and d
 
 CSS expressions can be used to set CSS properties dynamically, like the example below. If you need to change values like this it might be better to combine CSS with some JavaScript to achieve the same thing.
 
+```js
 background-color: expression( (new Date()).getHours()%2 ? "#B8D4FF" : "#F08A00" );
-
+```
 
 5. Minify JavaScript and CSS
 Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced. – YSlow
