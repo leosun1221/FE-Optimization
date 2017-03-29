@@ -11,7 +11,7 @@ This is pretty simple to fix. Simply make sure you don’t have any sources that
 #### <a name="s2"></a>2. Put CSS at Top
 *Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively.*
 
-The HTML specification states that stylesheets are to be included in the HEAD of the page. However, if you do this it will become render blocking. And while it will fix the warning in YSlow it will actually create one to appear in Google PageSpeed Insights. Completely eliminating the use of render blocking resources may not be possible in all cases. However, there do exist some recommendations to help prevent blocking resources such as lessening the amount of CSS files, inlining your CSS, minifying your CSS, and moving your scripts to the bottom of the page (just before your `</body>` tag), etc.
+The HTML specification states that stylesheets are to be included in the HEAD of the page. However, if you do this it will become render blocking. And while it will fix the warning , it will actually create one to appear in Google PageSpeed Insights. Completely eliminating the use of render blocking resources may not be possible in all cases. However, there do exist some recommendations to help prevent blocking resources such as lessening the amount of CSS files, inlining your CSS, minifying your CSS, and moving your scripts to the bottom of the page (just before your `</body>` tag), etc.
 
 In our test, to fix our C grade for this rule we would need to move both our CSS footer stylesheets up to the top between our `<head></head>` tags.
 
