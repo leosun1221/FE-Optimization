@@ -103,3 +103,8 @@ For the best performance, you should always upload your images at scale if possi
 ```
 
 Most modern [web browsers support srcset](http://caniuse.com/#search=srcset), except IE and opera mini.
+
+
+#### <a name="s8"></a>8. Test Tool
+* [KeyCDN Website Speed Test](https://tools.keycdn.com/speed)
+* [Pingdom Website Speed Test](https://tools.pingdom.com/)
