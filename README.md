@@ -29,8 +29,8 @@ In our test, to fix our C grade for this rule we would need to move both our CSS
 
 When it comes to Javascript there are some best practices to always keep in mind.
 
-*Move your scripts to the bottom of the page right before your `</body>` tag.
-*Use the async or defer directive to avoid render blocking.
+* Move your scripts to the bottom of the page right before your `</body>` tag.
+* Use the async or defer directive to avoid render blocking.
 
 **Loading Javascript Asynchronously**
 
