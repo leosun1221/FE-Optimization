@@ -87,3 +87,20 @@ Keeping your cookie sizes small might not be as important as it used to be but i
 * Eliminate unnecessary cookies
 * Be mindful of setting cookies at the appropriate domain level so other sub-domains are not affected
 * Set an Expires date appropriately.
+
+
+#### <a name="s7"></a>7. Do Not Scale Images in HTML
+*Web page designers sometimes set image dimensions by using the width and height attributes of the HTML image element. Avoid doing this since it can result in images being larger than needed. For example, if your page requires image myimg.jpg which has dimensions 240×720 but displays it with dimensions 120×360 using the width and height attributes, then the browser will download an image that is larger than necessary.*
+
+For the best performance, you should always upload your images at scale if possible. For example, if you have an image that you want to display at 200px wide, don’t upload an image that is 400px wide and then scale it with HTML. A better way to accomplish this is to use the srcset attribute in the `<img />` tag which allows you to define possible resolutions that the browser can choose from. Here an example:
+
+```html
+<img src="/img/keycdn-600.jpg"
+      alt="KeyCDN"
+      srcset="/img/keycdn-300.jpg 300w,
+              /img/keycdn-600.jpg 600w,
+              /img/keycdn-1200.jpg 1200w" />
+```
+
+Most modern `web browsers support srcset`, except IE and opera mini.
+<a name="supportlink"></a>([support link](http://caniuse.com/#search=srcset))
