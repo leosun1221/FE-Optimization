@@ -3,8 +3,10 @@ You may expect a browser to do nothing when it encounters an empty image src. Ho
 
 This is pretty simple to fix. Simply make sure you don’t have any sources that are left empty. This is an older rule and we rarely see many people fail this rule.
 
+```js
 <img src="">
 
+```
 
 2. Put CSS at Top
 Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively. – YSlow
@@ -13,11 +15,12 @@ The HTML specification states that stylesheets are to be included in the HEAD of
 
 In our test, to fix our C grade for this rule we would need to move both our CSS footer stylesheets up to the top between our <head></head> tags.
 
+```js
 <head>
 <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
 <link href="https://opensource.keycdn.com/fontawesome/4.5.0/font-awesome.min.css" rel="stylesheet">
 </head>
-
+```
 3. Put JavaScript at Bottom
 JavaScript scripts block parallel downloads; that is, when a script is downloading, the browser will not start any other downloads. To help the page load faster, move scripts to the bottom of the page if they are deferrable. – YSlow
 
@@ -29,7 +32,10 @@ Use the async or defer directive to avoid render blocking.
 Loading Javascript Asynchronously
 Async allows the script to be downloaded in the background without blocking. Then, the moment it finishes downloading, rendering is blocked and that script executes. Render resumes when the script has executed.
 
+```js
 <script async src="foobar.js"></script>
+```
+
 Deferring Javascript
 
 The defer directive does the same thing, except it guarantees that scripts execute in the order they were specified on the page. So, some scripts may finish downloading then sit and wait for scripts that downloaded later but appeared before them.
