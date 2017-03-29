@@ -102,5 +102,4 @@ For the best performance, you should always upload your images at scale if possi
               /img/keycdn-1200.jpg 1200w" />
 ```
 
-Most modern `web browsers support srcset`, except IE and opera mini.
-<a name="supportlink"></a>([support link](http://caniuse.com/#search=srcset))
+Most modern [web browsers support srcset](http://caniuse.com/#search=srcset), except IE and opera mini.
