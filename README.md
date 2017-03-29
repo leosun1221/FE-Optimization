@@ -3,7 +3,7 @@ You may expect a browser to do nothing when it encounters an empty image src. Ho
 
 This is pretty simple to fix. Simply make sure you don’t have any sources that are left empty. This is an older rule and we rarely see many people fail this rule.
 
-```js
+```html
 <img src="">
 
 ```
@@ -15,7 +15,7 @@ The HTML specification states that stylesheets are to be included in the HEAD of
 
 In our test, to fix our C grade for this rule we would need to move both our CSS footer stylesheets up to the top between our <head></head> tags.
 
-```js
+```html
 <head>
 <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
 <link href="https://opensource.keycdn.com/fontawesome/4.5.0/font-awesome.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@ Use the async or defer directive to avoid render blocking.
 Loading Javascript Asynchronously
 Async allows the script to be downloaded in the background without blocking. Then, the moment it finishes downloading, rendering is blocked and that script executes. Render resumes when the script has executed.
 
-```js
+```html
 <script async src="foobar.js"></script>
 ```
 
@@ -54,7 +54,7 @@ CSS expressions (supported in IE beginning with Version 5) are a powerful, and d
 
 CSS expressions can be used to set CSS properties dynamically, like the example below. If you need to change values like this it might be better to combine CSS with some JavaScript to achieve the same thing.
 
-```js
+```css
 background-color: expression( (new Date()).getHours()%2 ? "#B8D4FF" : "#F08A00" );
 ```
 
